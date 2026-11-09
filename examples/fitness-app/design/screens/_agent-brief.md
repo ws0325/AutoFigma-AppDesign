@@ -5,7 +5,7 @@ Read this whole file before drawing. Everything visual comes from `examples/fitn
 ## Figma
 - File: https://www.figma.com/design/4OA6e0F7zsToQrgMqzkW6Z (fileKey `4OA6e0F7zsToQrgMqzkW6Z`).
 - Create your own session with `create_session` (fileKey above) and pass it on every call.
-- IDs of pages, variables, text styles, components and icons: `C:\Users\wangs\AppData\Local\Temp\claude\13b91c2c81314ffc\c0015816-558f-492e-bdca-252b8adb08de\scratchpad\repwise-figma-state.json`. Never guess IDs.
+- IDs of pages, variables, text styles, components and icons: `figma-state.json` in this folder (written by the coordinating agent after building the foundations). Never guess IDs.
 - Load the `figma:figma-use` and `figma:figma-generate-design` skills before your first `use_figma` call; pass `skillNames: "figma-use,figma-generate-design"`.
 - Work ONLY on your assigned page(s) and inside your assigned x-range. Do not edit variables, text styles, components or icons. Other agents are drawing on other pages at the same time.
 - Font: Inter, styles "Regular", "Medium", "Semi Bold" only. Apply the text styles by ID (`setTextStyleIdAsync`).
