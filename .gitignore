@@ -1,0 +1,11 @@
+# Reference images downloaded from Behance belong to their authors.
+# They are kept locally for analysis only and are never published.
+examples/*/design/research/*/
+!examples/*/design/research/*.md
+
+# Python
+__pycache__/
+*.pyc
+
+# Packaged skill (attach to GitHub releases instead)
+*.skill

@@ -1,0 +1,9 @@
+{
+  "name": "figma-app-design-builder",
+  "version": "1.0.0",
+  "description": "Reference-driven iOS app UI design in Figma: picks 3 Behance works, extracts their UI/UX pixel by pixel into a sourced DESIGN.md, lets you choose the style, then designs every screen against Apple HIG and Nielsen's heuristics.",
+  "author": {
+    "name": "Wang Sai"
+  },
+  "keywords": ["figma", "app design", "ui", "ux", "behance", "apple hig", "nielsen", "design system"]
+}

@@ -1,0 +1,16 @@
+{
+  "name": "autofigma-appdesign",
+  "owner": {
+    "name": "Wang Sai"
+  },
+  "metadata": {
+    "description": "Skills for designing complete iOS apps in Figma from real Behance references."
+  },
+  "plugins": [
+    {
+      "name": "figma-app-design-builder",
+      "source": "./",
+      "description": "Reference-driven iOS app UI design in Figma: Behance research, sourced DESIGN.md, Apple HIG + Nielsen checks."
+    }
+  ]
+}
