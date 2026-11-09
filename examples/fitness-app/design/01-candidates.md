@@ -4,7 +4,7 @@
 
 ## How the pool was built
 
-- Search term: `fitness app`
+- Search term: `fitness app` (one term only; `references/behance-research.md` suggests 2–3. One was enough here because the pool already held 32 works; a narrower product would need more terms)
 - Lists, top 15 of each (sort values verified in the address bar):
   - Most Appreciated: `https://www.behance.net/search/projects?search=fitness%20app&sort=appreciations`
   - Most Viewed: `…&sort=views`
