@@ -1,0 +1,21 @@
+| # | Work | Popularity | Visual | Style guide | Total | Style |
+|---|---|---|---|---|---|---|
+| 1 | [Fitness mobile app \| UX/UI design](https://www.behance.net/gallery/243053067/Fitness-mobile-app-UXUI-design) (picked) | 0.69 | 0.80 | yes | 0.81 | light;fill;brand;large;photo |
+| 2 | [LGrow - Personal Coaching Fitness App \| UX/UI](https://www.behance.net/gallery/254678997/LGrow-Personal-Coaching-Fitness-App-UXUI) (picked) | 0.82 | 0.65 | yes | 0.77 | dark;fill;neutral;large;photo |
+| 3 | [AI Fitness & Health Mobile App](https://www.behance.net/gallery/255349787/AI-Fitness-Health-Mobile-App) | 0.61 | 0.75 | yes | 0.74 | light;fill;brand;large;photo |
+| 4 | [Indore Cycling & Fitness Mobile App Design](https://www.behance.net/gallery/221311011/Indore-Cycling-Fitness-Mobile-App-Design) | 0.83 | 0.60 | yes | 0.74 | dark;fill;brand;large;photo |
+| 5 | [AI Habit & Fitness Tracker Mobile App \| UI UX Design](https://www.behance.net/gallery/250740123/AI-Habit-Fitness-Tracker-Mobile-App-UI-UX-Design) (picked) | 0.52 | 0.80 | yes | 0.74 | light;fill;neutral;large;cutout |
+| 6 | [AI Food Calorie Tracker App UI/UX - Nutrition & Fitness](https://www.behance.net/gallery/254567479/AI-Food-Calorie-Tracker-App-UIUX-Nutrition-Fitness) | 0.73 | 0.65 | yes | 0.73 | light;shadow;brand;large;photo |
+| 7 | [Fitness Mobile App Design](https://www.behance.net/gallery/220025249/Fitness-Mobile-App-Design) | 0.72 | 0.60 | yes | 0.70 | light;fill;brand;large;photo |
+| 8 | [Workout & Fitness Tracker Mobile App UI UX Design](https://www.behance.net/gallery/227103555/Workout-Fitness-Tracker-Mobile-App-UI-UX-Design) | 0.78 | 0.60 | - | 0.67 | dark;fill;brand;large;photo |
+| 9 | [Veyra - Wellness & Fitness Mobile App Design](https://www.behance.net/gallery/256469367/Veyra-Wellness-Fitness-Mobile-App-Design) | 0.57 | 0.70 | - | 0.65 | light;bento;brand;large;photo |
+| 10 | [Home workout app for fitness](https://www.behance.net/gallery/251510807/Home-workout-app-for-fitness) | 0.75 | 0.55 | - | 0.63 | dark;fill;neutral;large;photo |
+| 11 | [Fitness Mobile App Design](https://www.behance.net/gallery/255662483/Fitness-Mobile-App-Design) | 0.61 | 0.50 | yes | 0.59 | dark;fill;brand;large;photo |
+| 12 | [Bloomfit - Fitness Tracker App UI/UX Design](https://www.behance.net/gallery/232754155/Bloomfit-Fitness-Tracker-App-UIUX-Design) | 0.50 | 0.65 | - | 0.59 | light;fill;brand;large;photo |
+| 13 | [FitPulse Home Workout & Fitness App \| UIUX Design](https://www.behance.net/gallery/241223081/FitPulse-Home-Workout-Fitness-App-UIUX-Design) | 0.67 | 0.45 | yes | 0.59 | light;fill;brand;large;photo |
+| 14 | [Fitness Mobile App Design](https://www.behance.net/gallery/257610797/Fitness-Mobile-App-Design) | 0.59 | 0.45 | yes | 0.55 | light;fill;gradient;large;photo |
+| 15 | [The Pace Club — Fitness App](https://www.behance.net/gallery/253000721/The-Pace-Club-Fitness-App) | 0.22 | 0.70 | - | 0.51 | color;flat;neutral;large;none |
+
+Skipped "AI Fitness & Health Mobile App": style too close to picked "Fitness mobile app | UX/UI design" (light;fill;brand;large;photo vs light;fill;brand;large;photo)
+
+Skipped "Indore Cycling & Fitness Mobile App Design": style too close to picked "Fitness mobile app | UX/UI design" (dark;fill;brand;large;photo vs light;fill;brand;large;photo)
