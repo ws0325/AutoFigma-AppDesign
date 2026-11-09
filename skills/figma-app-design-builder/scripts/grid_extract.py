@@ -255,8 +255,8 @@ def main():
     sp = sub.add_parser("edges"); common(sp)
     sp.add_argument("--row", type=float, help="scan this row (y, in cells) left to right")
     sp.add_argument("--col", type=float, help="scan this column (x, in cells) top to bottom")
-    sp.add_argument("--threshold", type=int, default=8,
-                    help="colour difference (0-255) that counts as an edge, default 8; a white card on light grey differs by only ~11")
+    sp.add_argument("--threshold", type=int, default=5,
+                    help="colour difference (0-255) that counts as an edge, default 5; a white card on #F8F8F8 differs by only 7")
     sp.add_argument("--min", type=float, default=2, help="segments shorter than this many cells are noise, default 2")
     sp.set_defaults(fn=cmd_edges)
 

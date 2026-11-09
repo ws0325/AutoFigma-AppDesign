@@ -68,7 +68,7 @@ When the user says "design me a fitness app", do not start searching yet. Ask th
 1. **Purpose**: who is it for, what problem does it solve, which 2–3 things will people do most?
 2. **Features**: the must-have list. Does it involve sign-in, payment, maps, notifications or social features (these bring system rules with them)?
 3. **Feel**: what impression should it give (professional, relaxed, premium, playful…)? Any apps they love or dislike? Any fixed brand colour, logo or typeface?
-4. **Scope**: iPhone only? Greyscale low-fidelity first or straight to high fidelity (default: low-fi first)?
+4. **Scope**: iPhone only? (The skill designs directly in high fidelity, Light and Dark.)
 
 Then draft a **site map**: an indented list of every screen and which tab it belongs to, marking modal flows (cover the Tab Bar) and drill-down screens. Confirm it with the user and save it to `00-brief.md`. The site map is the only list of screens to draw.
 
@@ -140,7 +140,9 @@ Write each round's answers into DESIGN.md Part 2, "User choices". When all round
 
 ## Step 5: Design screen by screen in Figma
 
-Draw the site map one screen at a time, **using only values and components from DESIGN.md**. Figma build order (variables → text styles → components → screens) is in `references/figma-build.md`. Before calling Figma write tools, load the skills the Figma plugin provides (`figma-use`; add `figma-generate-design` for full screens and `figma-generate-library` for the component library). If Figma is not available, tell the user to connect it, and produce HTML screens in the meantime.
+Draw the site map one screen at a time, **using only values and components from DESIGN.md**. With many screens and subagents available, build the foundations yourself first and then split pages across subagents with a shared brief and shared sample data (`references/figma-build.md` §7).
+
+**Design straight in high fidelity**, Light first, then a Dark copy of every screen made by switching the variable mode (`references/figma-build.md`, "Deliverable"). Figma build order (variables → text styles → components → screens) is in `references/figma-build.md`. Before calling Figma write tools, load the skills the Figma plugin provides (`figma-use`; add `figma-generate-design` for full screens and `figma-generate-library` for the component library). If Figma is not available, tell the user to connect it, and produce HTML screens in the meantime.
 
 **Every screen goes through two HIG + Nielsen checks:**
 - **Before drawing**: list the rules this screen involves (payment → Apple Pay first [HIG · Apple Pay]; delete → confirmation [Nielsen #5]).
@@ -153,7 +155,7 @@ Draw the site map one screen at a time, **using only values and components from 
 - Add a line to DESIGN.md's borrowing record: which screen, what was borrowed, complete source.
 - This covers how to design a screen that is already planned. Adding a feature that is not in the site map changes the product's scope, so ask the user first.
 
-Habits that decide how "AI" it looks: give every screen one hero; use realistic sample data that agrees across screens (the total equals the sum of the items, names sound like real people); show only what the user would really have; buttons start with a verb, no "we", errors say how to fix them; greyscale only in low fidelity.
+Habits that decide how "AI" it looks: give every screen one hero; use realistic sample data that agrees across screens (the total equals the sum of the items, names sound like real people); show only what the user would really have; **use as few words as possible** — HIG: "Check each word to be sure it needs to be there. If you can use fewer words, do so." (`references/apple-hig-rules.md` §14a): no caption that repeats what is already on screen, no "we", few "your"; buttons start with a verb, errors say how to fix them.
 
 ---
 

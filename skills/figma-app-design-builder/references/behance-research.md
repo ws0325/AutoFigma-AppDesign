@@ -145,7 +145,7 @@ python scripts/grid_extract.py sample design/research/kolo/03.png --crop 120,80,
 | Colour | Backgrounds with `colors`; text with `sample` at the stroke centre; with a style guide, use the labelled hex |
 | Contrast | `python scripts/contrast.py "#text" "#background"` |
 
-- The edge threshold defaults to 8 (a white card on light grey differs by only about 11). Noisy images can use `--threshold 12`; fainter separations can go down to 5.
+- The edge threshold defaults to 5, because a white card on #F8F8F8 differs by only 7. Very noisy images can use `--threshold 10`; check that segment lengths still look plausible.
 - Round readings to 1 cell, then see whether they fall on multiples of 4 or 8. If not, record them as they are; do not force them.
 - Every value names its source: which image and which command or grid image.
 

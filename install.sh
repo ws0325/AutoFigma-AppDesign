@@ -56,7 +56,16 @@ if [ -n "$PY" ]; then
     echo "Pillow already installed."
   else
     echo "Installing Pillow (for scripts/grid_extract.py)..."
-    "$PY" -m pip install --user --quiet pillow || echo "Could not install Pillow automatically. Run: $PY -m pip install pillow"
+    if ! "$PY" -m pip install --user --quiet pillow 2>/dev/null; then
+      # Homebrew / Debian 12+ Pythons are "externally managed" and refuse pip --user.
+      if command -v brew >/dev/null 2>&1 && brew install --quiet pillow >/dev/null 2>&1; then
+        echo "Installed Pillow with Homebrew."
+      else
+        echo "Could not install Pillow automatically. Use a virtual environment:"
+        echo "  $PY -m venv ~/.venvs/figma-skill && ~/.venvs/figma-skill/bin/pip install pillow"
+        echo "and run the skill's scripts with ~/.venvs/figma-skill/bin/python"
+      fi
+    fi
   fi
 else
   echo "Python 3 not found. Install it from https://www.python.org/ and then run: python3 -m pip install pillow"

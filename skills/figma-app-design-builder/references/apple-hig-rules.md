@@ -4,7 +4,7 @@
 > This file is an independent summary in our own words and is not affiliated with or endorsed by Apple.
 
 ## Contents
-1. Layout · 2. Accessibility · 3. Typography · 4. Color · 5. Buttons · 6. Sheets · 7. Tab bars · 8. Onboarding · 9. Privacy · 10. Accounts · 11. Apple Pay · 12. Notifications · 13. Progress · 14. Live Activities · 15. Checklist
+1. Layout · 2. Accessibility · 3. Typography · 4. Color · 5. Buttons · 6. Sheets · 7. Tab bars · 8. Onboarding · 9. Privacy · 10. Accounts · 11. Apple Pay · 12. Notifications · 13. Progress · 14. Live Activities · 14a. Writing · 15. Checklist
 
 ---
 
@@ -109,6 +109,25 @@
 | Animation | ≤ 2 seconds; numeric transitions for changing numbers; move existing elements instead of rebuilding |
 | Presentations | Compact (both sides of the camera), Minimal (28 pt circle), Expanded (long press), Lock Screen |
 
+## 14a. Writing (less text)
+Source: HIG · Writing (page last changed December 16, 2025) and HIG · Alerts. Checked 2026-11-09 at https://developer.apple.com/design/human-interface-guidelines/writing.
+
+**Use fewer words.** HIG: "Check each word to be sure it needs to be there. If you can use fewer words, do so." On iPhone the small screen requires brevity.
+
+| Rule | What it means on a screen |
+|---|---|
+| Every word must be needed | Delete words that can go without losing meaning; read the text out loud |
+| One idea per screen | If a screen tries to say more than one thing, split it across screens; put the most important information first |
+| Don't repeat what is visible | No caption that restates a title, a number or a button label already on screen |
+| Verb-first labels | "Send", not "Let's do it!"; links say what they open, never "Click here" |
+| Possessive pronouns sparingly | "Favorites", not "Your Favorites"; never "we" ("Unable to load content", not "We're having trouble…") |
+| Settings labels | Plain label; if a description is needed, say what happens when it is **on** (people infer off) |
+| Alerts and sheets | Title clear and short, never more than 2 lines; add a message only when necessary, as short as possible, in full sentences |
+| Errors | Next to the problem, no blame, say how to fix it; no "oops" |
+| Empty states | Say what to do next and offer the button to do it |
+| Consistent terms and steps | One word per concept; flows start with "Get Started", move with "Continue" or "Next", end with "Done" |
+| Device words | "Tap" on iPhone, never "click" |
+
 ---
 
 ## 15. HIG checklist (per-screen check in Step 5, walkthrough in Step 6)
@@ -128,6 +147,13 @@
 - [ ] Sheets: one at a time, grabber, swipe to dismiss, Cancel left / Done right
 - [ ] Tab Bar: one-word labels, visible between sections, covered only by modal flows
 - [ ] Determinate progress where progress can be measured
+
+**Writing**
+- [ ] Every word is needed; nothing repeats what is already on screen
+- [ ] One idea per screen; most important text first
+- [ ] No "we"; possessive "your/my" only where it adds meaning
+- [ ] Sheet and alert titles ≤ 2 lines; body only when necessary
+- [ ] Errors say how to fix it; empty states offer the next action
 
 **Behaviour**
 - [ ] Permissions requested in context; any pre-permission screen has a single "Continue"

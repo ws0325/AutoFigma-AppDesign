@@ -5,5 +5,16 @@
   "author": {
     "name": "Wang Sai"
   },
-  "keywords": ["figma", "app design", "ui", "ux", "behance", "apple hig", "nielsen", "design system"]
+  "keywords": [
+    "figma",
+    "app design",
+    "ui",
+    "ux",
+    "behance",
+    "apple hig",
+    "nielsen",
+    "design system"
+  ],
+  "homepage": "https://github.com/ws0325/AutoFigma-AppDesign",
+  "repository": "https://github.com/ws0325/AutoFigma-AppDesign"
 }

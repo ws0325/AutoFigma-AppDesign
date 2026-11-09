@@ -36,6 +36,8 @@ The "AI look" is not one mistake. It is a pile of average decisions: each looks 
 
 ## 3. Copy
 
+AI-written screens are usually too wordy: every card gets a subtitle, every section a sentence. Apple's rule is the opposite: "Check each word to be sure it needs to be there. If you can use fewer words, do so." [HIG · Writing] Count the words on a screen; if a line can go and the screen still makes sense, remove it. Full rules: `apple-hig-rules.md` §14a.
+
 | Common in AI output | Better |
 |---|---|
 | "Unlock your potential", "Seamless experience", "Elevate your journey" | Say the specific thing: "Book a quiet room in 2 taps" |

@@ -12,8 +12,8 @@
 📄 Cover          App name, version, date
 📄 Rules          Visual version of the spec: palette, type scale, spacing, radii, component specs
 📄 Components     Component library
-📄 Low-fi         Greyscale low fidelity, laid out by flow
-📄 Hi-fi          High fidelity
+📄 Hi-fi · 01 …   High fidelity, one page per flow (Light)
+📄 Hi-fi · Dark   The same screens in Dark mode
 📄 Archive        Old versions
 ```
 
@@ -26,7 +26,7 @@ Built straight from the DESIGN.md §13 quick-reference table:
 
 | Collection | Variables | Notes |
 |---|---|---|
-| `color` | `bg`, `surface`, `text/primary`, `text/secondary`, `accent`, `on-accent`, `destructive`, `border` (if any) | Light and Dark modes; in low fidelity `accent` is near-black |
+| `color` | `bg`, `surface`, `text/primary`, `text/secondary`, `accent`, `on-accent`, `destructive`, `border` (if any) | Light and Dark modes |
 | `space` | `1`=4, `2`=8, `3`=12, `4`=16, `5`=24, `6`=32, `page`=24 | |
 | `radius` | `card`, `sheet`, `pill`=999 | |
 | `size` | `tap`=44, `button`=56, `input`=48, `icon`=24 | |
@@ -89,9 +89,21 @@ After each flow, take a screenshot and check the flow looks consistent as a whol
 ### 6. When out of ideas
 When a screen has no counterpart in the 3 references, search Behance for that screen as described in `behance-research.md` §9, borrow its structure and interaction, keep DESIGN.md's visuals, and record it in DESIGN.md §15 and `screens.md`.
 
-## Low-fi → hi-fi
-- Low fidelity: greyscale variables only; images as light-grey blocks with a small centred icon; focus on structure, flow and copy.
-- High fidelity: switch the `accent` variable to the brand colour, replace images, add the Dark mode, design system presentations such as Live Activities (if any).
+### 7. Building many screens faster with subagents
+When the client can run subagents and there are more than about 8 screens:
+1. Build steps 1–3 (variables, text styles, components, icons) yourself, in one sequential pass. Every screen depends on them, so they must exist before anyone draws.
+2. Write a shared brief file next to the spec (e.g. `design/screens/_agent-brief.md`) with: the Figma file key; where the IDs of pages, variables, text styles and components are recorded; the frame rules (size, status bar, safe area, tab bar position); and **one block of sample data that every screen must use** (names, dates, weights, totals). Without it, parallel agents invent different numbers and the screens stop agreeing.
+3. Give each subagent its own Figma page (or a fixed x-range on a shared page) and a list of screens. Tell it to touch nothing outside that area, and to change no variables or components.
+4. Each subagent writes its per-screen check log (§5) to its own file. Merge the files into `screens.md` afterwards.
+5. When they finish, run the walkthrough audit (SKILL.md Step 6) over all pages yourself. Problems that span flows only show up there.
+
+## Deliverable: high fidelity, Light and Dark
+The skill designs **straight in high fidelity**: the spec's real palette, type, components and data from the first screen. There is no separate low-fi deliverable; the user's chance to check structure is the per-screen log and the walkthrough audit (Step 6).
+
+- **Light:** one page per flow, `Hi-fi · 01 …`, `Hi-fi · 02 …`.
+- **Dark:** clone the finished screens to a `Hi-fi · Dark` page and set each frame's explicit variable mode to `Dark` (`setExplicitVariableModeForCollection`). Because every fill is a variable, the screens switch on their own. Check contrast in Dark with `scripts/contrast.py`. [HIG · Color]
+- **States:** main state of each screen, plus the loading, empty, error, sheet and system presentations the flow needs (Live Activities, permission screens).
+- **Images:** use real or licensed images. If none exist yet, use a light block with a centred icon and name the layer `… placeholder (replace with …)`, so the gap is obvious at handoff.
 
 ## HTML output when Figma is unavailable
 - One `design/screens.html`: CSS variables at the top (named like the §13 table), one container per screen at the chosen size, laid out horizontally and grouped by flow.
