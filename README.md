@@ -271,7 +271,7 @@ AutoFigma-AppDesign/
 
 ## License
 
-A license has not been chosen yet; the owner will add one. Until then, no license is granted beyond what GitHub's terms allow (viewing and forking on GitHub). If you want to use or adapt this project, please open an issue.
+Released under the [MIT License](LICENSE) © 2026 Wang Sai. It covers this repository's own content: the skill text, scripts, READMEs and the screenshots of our own Figma screens. Behance works referenced in the examples remain the property of their authors and are not covered (see [Disclaimer](#disclaimer)).
 
 ## Credits
 
