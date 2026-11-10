@@ -1,0 +1,89 @@
+{
+  "fileKey": "4OA6e0F7zsToQrgMqzkW6Z",
+  "fileUrl": "https://www.figma.com/design/4OA6e0F7zsToQrgMqzkW6Z",
+  "pages": {
+    "Cover": "0:1",
+    "Foundations & Components": "1:2",
+    "Hi-fi · 01 Onboarding": "1:3",
+    "Hi-fi · 02 Today & Workout": "1:4",
+    "Hi-fi · 03 Library & Progress": "1:5",
+    "Hi-fi · 04 Profile & Account": "1:6",
+    "Hi-fi · 05 System (Live Activity)": "1:7",
+    "Hi-fi · Dark": "31:3"
+  },
+  "collections": {
+    "Color": "VariableCollectionId:1:8",
+    "Dimension": "VariableCollectionId:1:20"
+  },
+  "modes": {
+    "light": "1:0",
+    "dark": "1:1"
+  },
+  "vars": {
+    "color/bg": "VariableID:1:9",
+    "color/surface": "VariableID:1:10",
+    "color/surface-muted": "VariableID:1:11",
+    "color/text/primary": "VariableID:1:12",
+    "color/text/secondary": "VariableID:1:13",
+    "color/action": "VariableID:1:14",
+    "color/on-action": "VariableID:1:15",
+    "color/tab-unselected": "VariableID:1:16",
+    "color/data/positive": "VariableID:1:17",
+    "color/data/track": "VariableID:1:18",
+    "color/destructive": "VariableID:1:19",
+    "space/1": "VariableID:1:21",
+    "space/2": "VariableID:1:22",
+    "space/3": "VariableID:1:23",
+    "space/4": "VariableID:1:24",
+    "space/5": "VariableID:1:25",
+    "space/6": "VariableID:1:26",
+    "space/page": "VariableID:1:27",
+    "radius/card": "VariableID:1:28",
+    "radius/sheet": "VariableID:1:29",
+    "radius/pill": "VariableID:1:30",
+    "size/tap": "VariableID:1:31",
+    "size/button": "VariableID:1:32",
+    "size/chip": "VariableID:1:33",
+    "size/row": "VariableID:1:34",
+    "size/tabbar": "VariableID:1:35"
+  },
+  "textStyles": {
+    "Title/Page": "S:063347b99b8a0a7505f9b0e40d9a95247e22b38e,",
+    "Title/Page Secondary": "S:b0961cb9799f0f95f245b33cde9d6a7b82507152,",
+    "Number/Hero": "S:0a6ae8be780c4df4192f4be5754f82c337543163,",
+    "Number/Card": "S:fc17200a20638c4517b0742acb929df99f6a27c3,",
+    "Heading/Section": "S:7346b47847c9c46d71f69a68a5a7734a2b7e535e,",
+    "Heading/Card": "S:d7b56b4a447af823d3720d76b4d56bd4430bb5c4,",
+    "Body": "S:d2c94f461292d9d27509a2f3b4c55ded85dc9c4e,",
+    "Button": "S:ad1b9f68eea45096dc5ea25c5e4c3a6b1dfd3b62,",
+    "Callout": "S:1a1b2f8d736af0af8bc0fdddef222d6597872202,",
+    "Subhead": "S:fe67439dbc61aa576d671d15c123aecbf93d5a13,",
+    "Label": "S:8e5384d07599a1b7099dbf9b6430ef282d9682dc,",
+    "Tab": "S:f75c2521e10f1df56ebc9eccc11e580cd9a10e94,"
+  },
+  "components": {
+    "Button (component set; variants Type=Primary|Secondary|Destructive; TEXT property 'Label')": "3:8",
+    "Icon Button (component; INSTANCE_SWAP property 'Icon')": "3:9",
+    "Chip (component set; variants Selected=True|False; TEXT property 'Label')": "3:17",
+    "Tab Bar (component set; variants Active=Today|Library|Progress|Profile; 361x64)": "3:94",
+    "List Row (component; TEXT properties 'Title', 'Subtitle'; 361x64)": "3:95",
+    "Stepper (component; TEXT property 'Value')": "3:102"
+  },
+  "icons": {
+    "calendar": "2:6",
+    "dumbbell": "2:9",
+    "chart": "2:12",
+    "person": "2:16",
+    "chevron-right": "2:19",
+    "chevron-left": "2:22",
+    "plus": "2:25",
+    "minus": "2:28",
+    "check": "2:31",
+    "close": "2:34",
+    "search": "2:38",
+    "timer": "2:42",
+    "bell": "2:46",
+    "play": "2:49",
+    "trophy": "2:52"
+  }
+}
