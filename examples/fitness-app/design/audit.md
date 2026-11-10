@@ -1,12 +1,12 @@
 # Walkthrough audit: Repwise v1.0
 
-**Date:** 2026-11-09 · **Scope:** 18 hi-fi screens (16 app screens in Light and Dark, 2 system presentations) · **Spec:** `DESIGN.md`
+**Date:** 2026-11-09, colour update 2026-11-10 · **Scope:** 18 hi-fi screens (16 app screens in Light and Dark, 2 system presentations) · **Spec:** `DESIGN.md`
 **Method:** each main task walked end to end against Nielsen's 10 heuristics; the whole app checked against `apple-hig-rules.md` §15 (including the new §14a Writing) and `anti-ai-checklist.md` §5. Contrast computed with `scripts/contrast.py`. Severity uses Nielsen's 0–4 scale.
 
 ## Already complies
 
 - **One hero per screen**, one leading edge at 16, content inside the safe area, tab bar hidden in modal flows. [HIG · Layout] [HIG · Tab bars]
-- **Colour only for data:** green appears once per screen at most (PR marker or this week's bar), always with the text "PR" or "THIS WEEK". [HIG · Color] [HIG · Accessibility]
+- **One accent:** cyan #22D3EE (since v1.1; green before) only on actions, selected states and one data highlight per screen, always with the text "PR" or "THIS WEEK"; text on cyan is near-black (10.31:1). [HIG · Color] [HIG · Accessibility]
 - **Contrast:** text/primary 16.7:1 and text/secondary 4.99:1 on the Light base; white 21:1 and #A1A1AA 8.19:1 on the Dark base; destructive 4.83:1 (Light) and 4.99:1 (Dark). [HIG · Accessibility]
 - **Account rules:** sign-in only when saving the first workout, with Sign in with Apple and a "Not Now" that keeps data on the iPhone; Delete Account is easy to find, never the primary style, states what is removed and when. [HIG · Managing accounts] [HIG · Buttons]
 - **Permission:** reminders explainer has exactly one "Continue" button and appears when the user turns reminders on. [HIG · Privacy]
@@ -79,3 +79,6 @@
 5. Radii: pill + 20 (+ 28 on sheets); greys for text: 2; weights: 3.
 6. Numbers agree across screens: yes (see above).
 7. Generic copy: none found after the writing pass.
+
+## Colour update (2026-11-10)
+The user asked for a more vivid colour instead of the all-black UI. Cyan #22D3EE replaced near-black as the action colour and green as the data colour. Checked again after the change: white text on cyan fails (1.81:1), so on-action is near-black #0B1418 (10.31:1); the tab bar got its own `nav` colour so it does not turn cyan; Sign in with Apple was rebound to black / white; past weeks in the progress chart are near-black so this week's cyan bar stands out. Dark mode re-checked on all 16 copies.

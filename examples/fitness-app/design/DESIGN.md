@@ -2,7 +2,7 @@
 
 **What this is:** the single design spec for Repwise, a strength-training log for gym-goers past their first month (see `00-brief.md`).
 **Based on:** 3 Behance references (§1.2) + user choices (Part 2) + Apple HIG (checked 2026-11-09) + Nielsen's 10 heuristics.
-**Version / date:** 1.0 · 2026-11-09 (Parts 1–3; rounds 2–3 decided by the AI on recommended options, see §16)
+**Version / date:** 1.1 · 2026-11-10 (cyan accent, see §16 #6); 1.0 · 2026-11-09 (Parts 1–3; rounds 2–3 decided by the AI on recommended options, see §16)
 
 Source tags: [Spec] author's style guide · [Measured ≈] grid measurement · [Observed] pattern seen · [HIG] · [Nielsen] · [User choice] · [AI suggestion]
 
@@ -93,7 +93,7 @@ Search `fitness app` on Behance; top 15 of Most Appreciated (`sort=appreciations
 | 1 / Q3 | Side margins | A | 16 pt | [User choice · 1/Q3] [Spec · Femotion img 12] [Measured · Femotion 17.png, NutriPal 04.png] |
 | 1 / Q4 | Background layers | A | #F8F8F8 base + #FFFFFF cards, no shadow | [User choice · 1/Q4] [Measured · Femotion 17.png] |
 | 1 / Q5 | Light / dark | A (recommended) | Light first; dark mode values defined, drawn at hi-fi | [User delegated: "just do a version"] [HIG · Color] |
-| 2 / Q6 | Accent | C (recommended) | No UI accent; near-black #18181B for actions; colour only for data | [User delegated] [Spec · NutriPal img 15] |
+| 2 / Q6 | Accent | **custom (changed after review)** | Cyan #22D3EE for actions, selected states and data highlights, with near-black #0B1418 text on it; the tab bar stays near-black | [User choice · "make it more vivid, e.g. cyan; pure black doesn't look good"] [Spec · Femotion img 13–14: bright fill + dark text] |
 | 2 / Q7 | Typeface | B (recommended) | Inter (Lufga is a paid "Premium Font") | [User delegated] [Spec · LGrow img 04] [Spec · NutriPal img 16] |
 | 2 / Q8 | Type scale | C + B (recommended) | iOS default sizes; NutriPal two-line page title with a darker grey | [User delegated] [HIG · Typography] [Measured · NutriPal 04.png] |
 | 2 / Q9 | Big numbers | B (recommended) | Regular numbers with a small all-caps label above | [User delegated] [Observed · NutriPal img 04] |
@@ -112,11 +112,11 @@ Priority when rules conflict: accessibility [HIG] > other [HIG] > user choices >
 
 ## 1. Core principles
 1. **Numbers are the hero.** Every screen has one large number or title; weights, reps and time are what people came for. [Observed · NutriPal img 04] [AI suggestion]
-2. **Monochrome UI, colour only for data.** Actions are near-black; green appears only in charts and PR markers, always with a label. [User choice · 2/Q6] [HIG · Color]
+2. **Neutral UI, one cyan accent.** Cyan #22D3EE marks what you can do (primary button, selected chip, selected tab, done sets) and the one data highlight on a screen (this week's bar, PR marker). Text on cyan is near-black. Everything else stays neutral. [User choice · 2/Q6] [HIG · Color]
 3. **Layer by fill.** #F8F8F8 base, #FFFFFF cards, no shadows, no borders. [User choice · 1/Q4]
 4. **One pill shape and one card radius (20).** [User choice · 2/Q10] [anti-ai-checklist §1]
 5. **Selected = filled near-black; unselected = white, no outline.** [anti-ai-checklist §1]
-6. **Two text colours only.** #18181B and #6B6B70. [anti-ai-checklist §1] [HIG · Accessibility]
+6. **Two text colours only.** #18181B and #6B6B70 (plus on-action #0B1418 on cyan). [anti-ai-checklist §1] [HIG · Accessibility]
 7. **Real, consistent sample data.** Kilograms, realistic lifts, totals that add up. [anti-ai-checklist §4]
 
 ## 2. Layout and grid
@@ -155,10 +155,11 @@ Minimum 11 pt. [HIG · Accessibility] Sizes from the iOS default scale. [HIG · 
 | surface-muted | #EFEFF1 | #2C2C2E | segmented track, empty slots, image placeholders | — |
 | text/primary | #18181B | #FFFFFF | titles, values, body | 16.7:1 on bg |
 | text/secondary | #6B6B70 | #A1A1AA | labels, captions | 4.99:1 on bg, 5.30:1 on surface, 4.62:1 on surface-muted |
-| action | #18181B | #FFFFFF | primary button, selected chip, tab bar | white on it 17.7:1 |
-| on-action | #FFFFFF | #18181B | text on action | — |
-| tab-unselected | #A1A1AA | #6B6B70 | unselected tab icon + label (the bar is action-coloured: dark in Light, white in Dark) | 6.91:1 on #18181B; 5.30:1 on #FFFFFF |
-| data/positive | #24DA4D | #30D158 | chart fills, PR marker (never text) | graphics only |
+| action | #22D3EE | #22D3EE | primary button, selected chip, selected tab, done set, rest card | on-action 10.31:1 on it |
+| on-action | #0B1418 | #0B1418 | text and icons on action (white on cyan is only 1.81:1) | 10.31:1 |
+| nav | #18181B | #2C2C2E | floating tab bar | — |
+| tab-unselected | #A1A1AA | #A1A1AA | unselected tab icon + label on nav | 6.91:1 on #18181B; 5.44:1 on #2C2C2E |
+| data/positive | #22D3EE | #22D3EE | this week's bar, PR marker (never text on white) | graphics only |
 | data/track | #E4E4E7 | #3A3A3C | chart remaining ticks | — |
 | destructive | #D92D20 | #FF6B60 | delete, discard | 4.83:1 on surface |
 Contrast computed with `scripts/contrast.py`. Dark values are [AI suggestion], drawn at hi-fi. [HIG · Color]
@@ -171,7 +172,7 @@ Contrast computed with `scripts/contrast.py`. Dark values are [AI suggestion], d
 ## 6. Components
 | Component | Spec | Source |
 |---|---|---|
-| Primary button | 52 high, full width, pill, action fill, on-action text 17 Semibold; loading shows "Saving…" inside | [AI suggestion] [Measured · Femotion ~50, LGrow ~50] [HIG · Buttons] |
+| Primary button | 52 high, full width, pill, cyan action fill, near-black on-action text 17 Semibold; loading shows "Saving…" inside | [AI suggestion] [Measured · Femotion ~50, LGrow ~50] [HIG · Buttons] |
 | Secondary button | 52 high, pill, surface-muted fill (surface on bg), text/primary | [AI suggestion] |
 | Destructive button | secondary shape, destructive text; never the primary | [HIG · Buttons] |
 | Icon button | 44 circle, surface fill, 24 icon, 1.5 stroke | [HIG · Accessibility] [Observed · NutriPal img 04] |
@@ -182,8 +183,9 @@ Contrast computed with `scripts/contrast.py`. Dark values are [AI suggestion], d
 | List row | 64 high; 44 circle thumbnail; title 17 + subtitle 15 secondary; chevron | [AI suggestion] |
 | Info row | label left (15 secondary) / value right (16 Medium) | [Observed · example-design-rules §6.4] |
 | Card | surface, radius 20, padding 16 | [User choice] |
-| Tab Bar | floating pill 64 high, 16 from the sides, action fill; 4 tabs with icon + label; selected tab = white pill with dark icon + label | [Observed · NutriPal img 04] [HIG · Tab bars] (labels on every tab) |
+| Tab Bar | floating pill 64 high, 16 from the sides, nav fill; 4 tabs with icon + label; selected tab = cyan (action) pill with on-action icon + label | [Observed · NutriPal img 04] [HIG · Tab bars] (labels on every tab) |
 | Sheet | surface, top radius 28, grabber, Cancel / Done | [HIG · Sheets] |
+| Sign in with Apple | black in Light, white in Dark (text/primary fill, bg label); never the cyan accent | [HIG · Sign in with Apple] |
 | Live rest card | action fill card radius 20; "REST" label, 48 countdown, determinate bar; Skip / +30 s | [HIG · Live Activities] [HIG · Progress indicators] |
 | Week strip | 7 days; trained = filled circle, planned = ring, today = label emphasised | [AI suggestion] [example-design-rules §6.8] |
 | Volume ticks | vertical ticks 4 wide, 8 gap; done = action, remaining = data/track | [Observed · NutriPal img 04] |
@@ -197,7 +199,7 @@ Week strip  M T W T F S S
 Workout card: PUSH DAY A · 6 exercises · about 55 min
               exercise preview list (3)  [ Start Workout ]
 This week card: VOLUME 12,450 kg · SESSIONS 2 of 3 · volume ticks
-Latest PR row: Bench Press 82.5 kg × 5  (green marker + "PR" label)
+Latest PR row: Deadlift 140 kg × 5  (cyan marker + "PR" label)
 Floating tab bar: Today · Library · Progress · Profile
 ```
 Active Workout (modal, tab bar hidden): top bar Cancel · elapsed time · Finish; exercise title; set rows; rest card appears after a set is ticked.
@@ -242,7 +244,7 @@ Tap targets ≥ 44; text ≥ 11; contrast per §4; PRs marked with label + icon,
 - No "Welcome back, Alex! 👋" → title is the day and date.
 - No fake charts → volume ticks from the sample data, totals that add up.
 - No cards in cards → set rows sit directly in the exercise card.
-- Accent appears at most once per screen (green PR marker or chart).
+- Cyan only where you can act or on the one data highlight; never as a background wash, never with a gradient.
 
 ## 13. Quick reference (Figma variables)
 | Item | Value | Variable |
@@ -259,7 +261,7 @@ Tap targets ≥ 44; text ≥ 11; contrast per §4; PRs marked with label + icon,
 - [ ] One hero; one leading edge at 16
 - [ ] Only Inter Regular / Medium / Semibold; nothing under 11 pt
 - [ ] Text colours only text/primary and text/secondary
-- [ ] Accent (green) at most once, always with a label
+- [ ] Cyan only on actions, selected states and at most one data highlight (with a text label); text on cyan is on-action
 - [ ] All tap targets ≥ 44; ≤ 1 primary button
 - [ ] Pill or radius 20 only; no shadow, no border
 - [ ] Tab bar visible except in modal flows
@@ -282,6 +284,7 @@ Tap targets ≥ 44; text ≥ 11; contrast per §4; PRs marked with label + icon,
 | 3 | Custom floating dark tab bar instead of the system Liquid Glass bar | Matches the chosen reference; keeps labels on every tab to stay within HIG | [HIG · Tab bars] [Observed · NutriPal] | 2026-11-09 |
 | 4 | Inter instead of Lufga | Lufga is a paid font | [Spec · NutriPal img 16] | 2026-11-09 |
 | 5 | Designed directly in high fidelity: Light pages per flow + a Dark copy of every screen; exercise images are named placeholders | The skill delivers hi-fi only; no licensed exercise images exist yet | [User · chat: "just do hi-fi"] [HIG · Color] | 2026-11-09 |
+| 6 | Accent changed from near-black to cyan #22D3EE; tab bar moved to its own `nav` colour; Sign in with Apple kept black / white; past weeks in the progress chart near-black so this week (cyan) stands out | User found the all-black UI unattractive and asked for a more vivid colour such as cyan; white text fails on cyan, so text on it is near-black | [User · chat 2026-11-10] [HIG · Color] [HIG · Accessibility] | 2026-11-10 |
 
 ---
 

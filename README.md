@@ -210,7 +210,7 @@ If that project is a git repository, add `design/research/*/` to its `.gitignore
 | Overall style | C | Off-white base, monochrome UI, colour only for data |
 | Side margins | A | 16 pt (Femotion's style guide, confirmed by measurement in A and C) |
 | Background layers | A | `#F8F8F8` base + `#FFFFFF` cards, no shadow |
-| Accent | recommended | No UI accent; near-black `#18181B` for actions; green only in charts and PR markers |
+| Accent | recommended, then changed | First near-black `#18181B`; after review the user asked for something more vivid, so actions and the one data highlight became cyan `#22D3EE` with near-black text on it (white on cyan fails at 1.81:1) |
 | Typeface | recommended | Inter (C's Lufga is a paid font) |
 | Card radius | recommended | 20 (measured on C) |
 
